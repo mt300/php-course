@@ -1,6 +1,7 @@
 {% extends 'base.html'%}
 
 {% block content %}
+
 <!-- style="height:79vh;" style para o body -->
 
     <!-- <h1 class="m-3 text-gradient" >INDEX</h1> -->
@@ -11,7 +12,7 @@
             <img src="https://getbootstrap.com/docs/5.2/examples/heroes/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" style="aspect-ratio: 7/5; height: 500px; width: 700px;">
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">WebProduto - Slogan</h1>
+            <h1 class="display-5 fw-bold lh-1 mb-3">WebProduct - Slogan</h1>
             <p class="lead">
                 Product info and description. Could be described detailed
                 to fill many lines and the text should be very rich in usefull informatil.
@@ -26,6 +27,13 @@
         </div>
 
         <div class="row">
+          {% if postError.msg != '' %}
+            
+            {% autoescape 'html' %}
+              {{ message('warning',postError.msg)|raw }}
+            {%endautoescape%}
+            
+          {%endif%}
 
           {% for post in posts %}
             <div class="col-md-3">

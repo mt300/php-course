@@ -13,6 +13,14 @@ class Message
         return $this->render();   
     }
     
+    public function __serialize(): array
+    {   
+        return [
+            'warning' => $this->warning("w"),
+            'success' => $this->success("s")
+        ];
+    }
+
     public function success(string $msg): Message
     {
         $this->css = 'alert alert-success';
@@ -41,7 +49,6 @@ class Message
     {
         return "<div class='{$this->css}' > {$this->text} </div>";
     }
-    
     private function filter(string $msg):string
     {
         return filter_var(strip_tags($msg), FILTER_SANITIZE_SPECIAL_CHARS);

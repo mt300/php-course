@@ -1,9 +1,9 @@
-// alert("hello wordlllll")
+console.log("pir")
 
 var sidebar = document.getElementById("sidebar");
 var links = sidebar.querySelectorAll("a.nav-link")
 links.forEach( el => {
-    // console.log(el)
+    // console.log("piruzinho")
     el.addEventListener('mouseover', (e) => {
         e.target.classList.add('active');
         e.target.classList.remove('text-white');

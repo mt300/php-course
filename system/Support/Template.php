@@ -3,6 +3,7 @@
 namespace system\Support;
 use Twig\Lexer;
 use system\Helpers\Helpers;
+use system\Core\Message as Message;
 
 class Template
 {
@@ -35,6 +36,13 @@ class Template
             $this->twig->addFunction(
                 new \Twig\TwigFunction('hello',function(string $usr=''){
                     return Helpers::hello($usr);
+                })
+            ),
+            $this->twig->addFunction(
+                new \Twig\TwigFunction('message',function(string $type,string $msg){
+                    // return ()->warning($msg);
+
+                    return call_user_func_array(array(new Message(),$type),[$msg]);
                 })
             )
         );

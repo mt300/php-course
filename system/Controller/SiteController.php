@@ -26,13 +26,29 @@ class SiteController extends Controller
     {
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-            $search = $_POST['search'];
+            // $search = $_POST['search'];
+            $search = filter_input(INPUT_POST,'search',FILTER_DEFAULT);
             $posts = ( new PostModel())->searchForm($search);
-
-            echo $this->template->render('index.html', [
-                'title' => 'Home',
-                'posts' => $posts
-            ]);
+            $postError = [
+                'msg' => '',
+                'class' => ''
+            ];
+            
+            if(!$posts){
+                
+                // $posts = (new PostModel())->search(null,null);
+                $postError['msg'] = "Não há resultados para essa busca";        
+                $postError['class'] = "alert alert-warning";
+            }
+            foreach ($posts as $post){
+                echo $post->title.'<hr>';
+            }
+            // echo $this->template->render('index.html', [
+            //     'title' => 'Home',
+            //     'posts' => $posts,
+            //     'postError' => $postError
+            // ]);
+            
         }else{
             Helpers::redirect('404/');
         }
