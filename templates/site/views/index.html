@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<!-- style="height:79vh;" style para o body -->
+
+    <!-- <h1 class="m-3 text-gradient" >INDEX</h1> -->
+    <!-- <p class="m-3 text-gradient"> Hello World</p> -->
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="https://getbootstrap.com/docs/5.2/examples/heroes/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" style="aspect-ratio: 7/5; height: 500px; width: 700px;">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">WebProduto - Slogan</h1>
+            <p class="lead">
+                Product info and description. Could be described detailed
+                to fill many lines and the text should be very rich in usefull informatil.
+                That's a bad example, but I'm a little tired now, not much creative as I 
+                usually am.
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Comprar</button>
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Avaliações</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+          {% for post in posts %}
+            <div class="col-md-3">
+              <div class="card" >
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                  <a href= "{{ 'post/'~post.id }}">
+                    <h5 class="card-title">{{post.title}}</h5>
+                    <p class="card-text">{{post.text}}</p>
+                  </a>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            <br>
+            </div>
+          {%endfor%}
+
+        </div>
+      </div>
+    
+
+{% endblock %}
+

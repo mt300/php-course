@@ -1,0 +1,34 @@
+/* body{
+    background-color: red;
+} */
+
+/* .text-gradient {
+    background: linear-gradient(to right,rgb(129, 204, 106),rgb(170, 80, 194));
+    width: fit-content;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: fade 2s ease-in-out alternate-reverse infinite 0.3s;
+    pointer-events: none;
+    opacity: 0.5;
+} */
+/* @keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
+
+
+header  a.nav-link{
+    /* border: 1px solid red; */
+    /* background-color: ; */
+    color: white;
+}
+header  a.nav-link::after{
+    /* border: 1px solid red; */
+    /* background-color: ; */
+    color: gray;
+}

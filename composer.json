@@ -1,0 +1,25 @@
+{
+    "name": "mt300/blog",
+    "description": "default website system",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "system\\": "system/"
+        },
+        "files": [
+            "system/config.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "mt300",
+            "email": "matheus.tomazi5@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.0",
+        "pecee/simple-router": "dev-master",
+        "twig/twig": "^3.0"
+    }
+}
