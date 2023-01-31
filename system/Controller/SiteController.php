@@ -41,8 +41,9 @@ class SiteController extends Controller
                 $postError['class'] = "alert alert-warning";
             }
             foreach ($posts as $post){
-                echo $post->title.'<hr>';
+                echo '<hr><a href="/blog/post/'.$post->id.'" style="text-decoration:none; color:white;" ><span class="p-2 mx-2 my-3">'.$post->title.'</span></a>';
             }
+            echo '<hr>';
             // echo $this->template->render('index.html', [
             //     'title' => 'Home',
             //     'posts' => $posts,

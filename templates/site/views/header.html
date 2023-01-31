@@ -14,10 +14,13 @@
         <form  autocomplete="off" data-url-search="/blog/search" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
           <!-- <input autocomplete="false" name="hidden" style="display:none;" type="text"> -->
           <input type="search" name="search" id="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+          
+          <div id="search-result" class="position-absolute bottom-90 start-70 form-control-dark bg-dark min w-25" style="border-radius: 8%; " > 
+            <!-- <p style="color:white;" >text</p> -->
+            <!-- <p style="color:black;" >text</p> -->
+          </div>
         </form>
-
-        <div id="search-result"></div>
-        
+          
         <div class="text-end">
           <button type="button" class="btn btn-outline-light me-2">Login</button>
           <button type="button" class="btn btn-warning">Sign-up</button>

@@ -1,0 +1,60 @@
+/* body{
+    background-color: red;
+} */
+
+/* .text-gradient {
+    background: linear-gradient(to right,rgb(129, 204, 106),rgb(170, 80, 194));
+    width: fit-content;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: fade 2s ease-in-out alternate-reverse infinite 0.3s;
+    pointer-events: none;
+    opacity: 0.5;
+} */
+/* @keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
+
+
+header  a.nav-link{
+    /* border: 1px solid red; */
+    /* background-color: ; */
+    color: white;
+}
+header  a.nav-link::after{
+    /* border: 1px solid red; */
+    /* background-color: ; */
+    color: gray;
+}
+
+.menu {
+    /* border: 1px solid red; */
+    width: min(20vw,200px);
+    margin: 0 0 0 max(4%,10px);
+    position: fixed;
+    top: 5%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 2%; */
+    height: 80vh;
+}
+.list-group-item {
+    /* border: 1px solid red; */
+    /* border: none; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 100%; */
+}
+.admin-container {
+    height: 100vh;
+}

@@ -12,6 +12,10 @@ try {
     Router::get(URL_SITE.'/sobre', 'SiteController@about');
     Router::get(URL_SITE.'/post/{id}', 'SiteController@post');
     Router::post(URL_SITE.'/search', 'SiteController@search');
+
+    Router::group(['namespace' => 'Admin'], function () {
+        Router::get(URL_ADMIN,'AdminDashboard@dashboard');
+    });
     // Router::post('localhost/blog/search', 'SiteController@search');
     Router::get(URL_SITE.'/404', 'SiteController@error404');
 

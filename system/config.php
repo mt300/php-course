@@ -19,4 +19,5 @@ define('URL_PROD', 'http://tomazi.com.br');
 define('URL_DEV', 'http://localhost/blog');
 
 define('URL_SITE','/blog');
+define('URL_ADMIN','/blog/admin/');
 
